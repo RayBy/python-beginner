@@ -59,7 +59,7 @@ line_2 = 'mttMZMMmEZUOmcqWiryMQhhTxqKSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysm
        'JFaXiUWgsKQrDOeZoNlZNRvHnLgCmysUeKnVJXPFIzvdDyleXylnKBfLCjLHntltignbQ'\
        'oiQzTYwZAiRwycdlHfyHNGmkNqSwXUrxGC'
 
-res_2 = re.findall(r'\w{2}[a-z]([A-Z]+)', line_2)
+res_2 = re.findall('(?:[a-z]{2}([A-Z]+)(?:[A-Z]{2}))', line_2)
 print(res_2)
 
 
