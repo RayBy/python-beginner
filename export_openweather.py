@@ -1,3 +1,6 @@
+# coding UTF-8
+__author__ = 'Ильиных Павел Сергеевич'
+
 import sys
 import sqlite3
 import os
@@ -44,8 +47,7 @@ def export():
             exit()
         col_names = [col[0] for col in cursor.description]
 
-        # экспорт файла в зависимости от формата
-        if exp_format == '--csv':
+        if exp_format == '--csv':  # экспортируем файл в нужный нам формат
             with open(file_name, 'w', encoding='UTF-8') as file:
                 file.write(', '.join(col_names))
                 file.write('\n')
